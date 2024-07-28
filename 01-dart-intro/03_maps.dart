@@ -1,5 +1,5 @@
 void main() {
-  final Map<dynamic, dynamic> pokemon = {
+  final Map<String, dynamic> pokemon = {
     'name': 'Pikachu',
     'hp': 100,
     'isAlive': true,
