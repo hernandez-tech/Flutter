@@ -1,7 +1,7 @@
 void main() {
-  final myCuadrado = Cuadrado(side: 10);
+  final myCuadrado = Cuadrado(side: -10);
   
-  myCuadrado.side = 5;
+  // myCuadrado.side = 5;
 
   print("Area: ${myCuadrado.area}");
 }
@@ -10,7 +10,8 @@ class Cuadrado {
   double _side;
 
   Cuadrado({required double side})
-    : _side = side;
+    : assert(side >= 0, "Side debe ser mayor a 0"),
+      _side = side;
   
   double get area {
     return _side * _side;
